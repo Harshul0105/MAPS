@@ -1,0 +1,22 @@
+#include <iostream>
+#include<unordered_map>
+using namespace std;
+int main(){
+    unordered_map<string,int>ageMap;
+    ageMap["Alice"]=25;
+    ageMap["Bob"]=30;
+    ageMap["Charlie"]=35;
+    
+   cout<<"Alicd Age="<<ageMap["Alice"]<<endl;
+   cout<<"Graph"<<ageMap["graph"]<<endl;
+   ageMap["Bob"] = ageMap["Bob"] + 3;//to change age of existing element
+   cout<<ageMap["Bob"];
+   ageMap["Trump"] = ageMap["Trump"] + 10;//change age of non-exting elememnt
+   cout<<ageMap["Trump"]<<endl;
+   ageMap["Charlie"] = 60;//change age 
+   cout<<ageMap["Charlie"]<<endl;
+   cout<<"\nAll entries in the map:"<<endl;
+   for (const auto& row: ageMap){// & is used to use the original value, saves memory
+       cout<<row.first<<":"<<row.second<<endl;
+   }
+}
