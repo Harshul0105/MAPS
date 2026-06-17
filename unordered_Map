@@ -19,4 +19,8 @@ int main(){
    for (const auto& row: ageMap){// & is used to use the original value, saves memory
        cout<<row.first<<":"<<row.second<<endl;
    }
+ //To search any value
+   if(ageMap.find("Bob") !=ageMap.end()){
+       cout<<"Bob is in the map"<<endl;
+   }
 }
